@@ -1,5 +1,5 @@
 import selenium
-import tempfile, shutil, pytest
+import pytest
 from selenium import webdriver
 from pages.add_to_cart import AddToCart
 
