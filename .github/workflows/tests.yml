@@ -14,7 +14,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - run: pytest --alluredir=allure-results
+      - name: Run tests with Xvfb
+        run: xvfb-run -a pytest --alluredir=allure-results
         continue-on-error: true
       - uses: simple-elf/allure-report-action@master
         with:
